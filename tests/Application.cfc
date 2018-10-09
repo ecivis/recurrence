@@ -9,4 +9,8 @@ component {
         "/recurrence": rootPath
     };
 
+    this.javaSettings = {
+        loadPaths: [expandPath("/lib/")]
+    };
+
 }
