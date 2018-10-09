@@ -1,0 +1,38 @@
+language: java
+
+env:
+  global:
+    - MODULE_ID=recurrence
+  matrix:
+    - ENGINE=lucee@5.2
+    - ENGINE=adobe@2016
+
+branches:
+  only:
+  - master
+
+sudo: required
+
+jdk:
+  - oraclejdk8
+
+dist: trusty
+
+before_install:
+  - curl -fsSl https://downloads.ortussolutions.com/debs/gpg | sudo apt-key add -
+  - sudo echo "deb http://downloads.ortussolutions.com/debs/noarch /" | sudo tee -a
+    /etc/apt/sources.list.d/commandbox.list
+
+install:
+- sudo apt-get update && sudo apt-get --assume-yes install commandbox
+- box install
+
+before_script:
+  - box server start cfengine=$ENGINE port=8500 saveSettings=false
+
+script:
+  - box testbox run runner='http://127.0.0.1:8500/tests/runner.cfm'
+
+after_failure:
+  - cd $TRAVIS_BUILD_DIR
+  - box server log
