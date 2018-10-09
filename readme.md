@@ -50,8 +50,23 @@ writeDump(var=recurrenceSet, abort=true);
 The result is an array with 12 elements, each a string representing a recurrence.
 
 
+## Documentation
+To generate API documentation, ensure that the [DocBox Commands](https://github.com/Ortus-Solutions/commandbox-docbox) system package (v1.3 or later) is available in your [CommandBox](https://www.ortussolutions.com/products/commandbox) installation. Then run the documentation generation script.
+```sh
+package install id="commandbox-docbox@>=1.3.2" system=true
+package run-script generateDocs
+```
+The generated documentation is written to `./apidocs/index.html`
+
+
 ## Tests
-To run the test specifications, first start the CommandBox embedded server (`server start`), then execute `testbox run`.
+To run the test specifications (if the package was installed in non-production mode), first start the [CommandBox](https://www.ortussolutions.com/products/commandbox) embedded server (`server start`), then wait a moment for the server to become available and execute `testbox run`.
+
+
+## To-Do List
+
+* `Recurrence.getNextRecurrence()` to get the soonest next recurrence after today.
+* Implement more advanced rules, for example "Tuesdays and Thursdays of every second week."
 
 
 ## License

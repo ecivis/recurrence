@@ -22,6 +22,7 @@
     "dependencies":{},
     "ignore":[
         "**/.*",
+        "apidocs/",
         "tests/"
     ],
     "devDependencies":{
@@ -47,5 +48,8 @@
         "verbose":true,
         "watchDelay":500,
         "watchPaths":"**.cfc"
+    },
+    "scripts": {
+        "generateDocs": "rm path=./apidocs recurse=true force=true && mkdir directory=./apidocs && docbox generate mappings:models=./models strategy-outputDir=./apidocs strategy-projectTitle='Recurrence Library API'"
     }
 }
