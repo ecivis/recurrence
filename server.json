@@ -1,0 +1,7 @@
+{
+    "openBrowser":false,
+    "app":{
+        "cfengine":"lucee@5.2"
+    },
+    "name":"RecurrenceTests"
+}

@@ -1,0 +1,51 @@
+{
+    "name":"Recurrence",
+    "version":"0.0.1",
+    "location":"ecivis/recurrence#v0.0.1",
+    "author":"Joseph Lamoree",
+    "homepage":"https://github.com/ecivis/recurrence",
+    "documentation":"https://github.com/ecivis/recurrence",
+    "repository":{
+        "type":"git",
+        "url":"https://github.com/ecivis/recurrence"
+    },
+    "bugs":"https://github.com/ecivis/recurrence/issues",
+    "shortDescription":"A ColdBox Module for processing recurrence rules.",
+    "slug":"recurrence",
+    "type":"modules",
+    "license":[
+        {
+            "type":"MIT",
+            "url":"https://opensource.org/licenses/MIT"
+        }
+    ],
+    "dependencies":{},
+    "ignore":[
+        "**/.*",
+        "tests/"
+    ],
+    "devDependencies":{
+        "testbox":"^2.8.0+191"
+    },
+    "installPaths":{
+        "testbox":"testbox"
+    },
+    "testbox":{
+        "runner":[
+            {
+                "default":"/tests/runner.cfm"
+            }
+        ],
+        "labels":"",
+        "reporter":"",
+        "bundles":"",
+        "recurse":true,
+        "directory":"tests.specs",
+        "testBundles":"",
+        "testSuites":"",
+        "testSpecs":"",
+        "verbose":true,
+        "watchDelay":500,
+        "watchPaths":"**.cfc"
+    }
+}

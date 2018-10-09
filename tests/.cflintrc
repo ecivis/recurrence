@@ -1,0 +1,14 @@
+{
+    "desc": "Don't run CFLint on the test cases.",
+    "rule": [ ],
+    "excludes": [
+    ],
+    "includes": [
+        {
+            "code": "NOTHING"
+        }
+    ],
+    "inheritParent": false,
+    "parameters": {
+    }
+}

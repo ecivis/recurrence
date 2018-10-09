@@ -1,0 +1,31 @@
+{
+    "rule": [ ],
+    "excludes": [
+        {
+            "code": "UNQUOTED_STRUCT_KEY"
+        },
+        {
+            "code": "STRUCT_ARRAY_NOTATION"
+        },
+        {
+            "code": "ARG_VAR_MIXED"
+        },
+        {
+            "code": "ARG_DEFAULT_MISSING"
+        }
+    ],
+    "includes": [
+    ],
+    "inheritParent": false,
+    "parameters": {
+        "ArgumentNameChecker.maxLength": 45,
+        "ArgumentNameChecker.maxWords": 6,
+        "MethodNameChecker.maxLength": 45,
+        "MethodNameChecker.maxWords": 6,
+        "VariableNameChecker.minLength": 1,
+        "VariableNameChecker.maxLength": 45,
+        "VariableNameChecker.maxWords": 6,
+        "LocalLiteralChecker.maximum": 6,
+        "GlobalLiteralChecker.maximum": 12
+    }
+}
