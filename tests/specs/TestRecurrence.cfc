@@ -4,7 +4,7 @@ component extends="testbox.system.BaseSpec" {
         describe("The Recurrence Library", function () {
 
             beforeEach(function () {
-                variables.recurrence = new recurrence.Recurrence();
+                variables.recurrence = new recurrence.models.Recurrence();
             });
 
             it("should create simple rules", function () {

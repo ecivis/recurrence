@@ -6,7 +6,7 @@ component {
 
     rootPath = reReplaceNoCase(getDirectoryFromPath(getCurrentTemplatePath()), "tests(\\|/)", "");
     this.mappings = {
-        "/recurrence": rootPath & "/models"
+        "/recurrence": rootPath
     };
 
 }

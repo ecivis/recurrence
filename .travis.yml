@@ -4,8 +4,8 @@ env:
   global:
     - MODULE_ID=recurrence
   matrix:
+    - ENGINE=lucee@5.0
     - ENGINE=lucee@5.2
-    - ENGINE=adobe@2016
 
 branches:
   only:
